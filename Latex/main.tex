@@ -1,11 +1,17 @@
 \input{vorlage_light}
+\graphicspath{./bilder/}
+
+%Für diese Version des Dokuments spezielle Anpassungen
+\newcommand{\lat}[2]{(\textit{Lateinisch \glqq{}#1\grqq{} = #2})}
+\newcommand{\merk}[1]{\glqq{}\textit{#1}\grqq{}}
+
 
 \lohead{\includesvg[height=8mm]{bilder/ba_glauchau_logo}}
 
 \begin{document}
 \frontmatter
 
-\title{Vorlesungsskript Ingenieursmathemathik 4DE19-1-IMA}
+\title{Vorlesungsskript Ingenieursmathematik 4DE19-1-IMA}
 
 \author{Dominic Sczyrba}
 \date{14. September 2021}
@@ -15,7 +21,92 @@
 
 \mainmatter
 \setlength{\mathindent}{0cm}
-\section{Aufgabenstellung}
-    \label{sec:aufgabenstellung}
-    Ein Satz.
+
+\section{Allgemeine Grundlagen Elementarer Mathematik}
+    \subsection{Axiome, Definitionen und Sätze (vgl. ET-LV)}
+        \label{sec:grundlagen}
+        \subsubsection{Axiome}
+            \begin{itemize}[leftmargin=*]
+                \item Grundannahmen die aus der unmittelbaren Anschauung resultieren
+                \item Einleichtentes Prinzip, das keines Beweises bedarf
+                \item Formale Eigenschaft
+                \item Eine unabgeleitete Aussage
+            \end{itemize}
+            \underline{Beispiele:}
+            \begin{itemize}[leftmargin=*]
+                \item Newtonsche Axiome
+                \item Grundgesetz der Elektrostatik
+                \item Kommutativgesetz \lat{commutare}{vertauschen}\\
+                    \vspace{-0.8cm}
+                    \begin{eqnarray*}
+                        a \ +     \ b &=& b \ +     \ a \\
+                        a \ \cdot \ b &=& b \ \cdot \ a \\
+                        a \ \land \ b &=& b \ \land \ a \\
+                        a \ \lor  \ b &=& b \ \lor  \ a
+                    \end{eqnarray*}
+                \item Assoziativgesetz  \lat{soziare}{zusammengehörig}
+                \item Distributivgesetz \lat{distribuere}{verteilen}
+                \item Geometrie - Euklid \\
+                    \merk{Durch einen Punkt außerhalb einer Gerade gibt es nur eine Gerade, die sich mit der Gegebenen nicht schneidet.}
+                    \\ (Zeichnung parallele Linien und Zeichnung gekrümmte Ebene einfügen)
+            \end{itemize}
+        \subsubsection{Definitionen}
+            \begin{itemize}[leftmargin=*]
+                \item (sinnvolle) Festlegungen
+                \item ebenfalls nicht beweisbar
+            \end{itemize}
+            \underline{Beispiele:}
+            \begin{itemize}[leftmargin=*]
+                \item $\varrho = \frac{dQ}{dV}$
+                \item $i = \frac{d}{dt} Q(t)$
+                \item $R = \frac{U}{I}$
+                \item   \begin{tabular}[t]{l l}
+                        Potenzieren     &  $a^b  \ \equiv \ \overbrace{a \cdot a \cdot a \cdot a \cdot \ldots}^{b \text{-Faktoren}} $ \\
+                                        &  $2^{4}\ \equiv \ {2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot = 32}$ \\ 
+                                        &  $a^0 \ = \ 1$ \\
+                        $\implies$ Idee: &  $a^b = \underbrace{a \cdot a \cdot a \cdot a}_{b \text{-Faktoren}} \cdot 1$ \\  
+                        \end{tabular}
+            \end{itemize}
+        \subsubsection{Sätze}
+            \begin{itemize}[leftmargin=*]
+                \item wahrheitsfähige und beweispflichtige Aussagen
+            \end{itemize}
+            \underline{Beispiel: } Wenn eine Zahl durch $8$ teilbar ist, dann ist sie auch durch $4$ teilbar. 
+
+            \begin{tabular}{@{}l l}
+                Beweis: & Es sei $x\in\mathbb{N}$, wenn $\frac{x}{8} = y$ und $y\in\mathbb{N}$. \\
+                & $\implies \frac{x}{2 \cdot 4} = y | \cdot 2$ dann ist $\frac{x}{4} = 2 \cdot y$ d.h. ebenfalls $\in\mathbb{N}$. \\
+            \end{tabular}
+
+            \underline{$\Rightarrow$ Merke:} \merk{Formeln gibt es weder in Mathematik noch in Physik.}
+    \subsection{Mengenlehre}
+        lt. Georg Cantor (1845 - 1918)
+            \subsubsection{Begriffe und Darstellungen}
+                \underline{Definition Menge:} \merk{Zusammenfassung von bestimmten wohlunterscheidbaren Objekten (Elementen) unserer Anschauung oder unseres Denkens}
+
+                \underline{Beispiele:}
+                    \begin{itemize}[leftmargin=*]
+                        \item Menge aller Computer
+                        \item Menge aller Programmiersprachen
+                        \item Menge aller Lösungen einer Gleichung
+                        \item Menge aller natürlichen Zahlen
+                        \item Menge aller Gedanken
+                    \end{itemize}
+
+                \underline{Wichtig:}
+                    \begin{itemize}[leftmargin=*]
+                        \item mindestens \bfseries eine \mdseries gemeinsame Eigenschaft
+                        \item für die Entscheidung, ob ein Element zu einer Menge gehört oder nicht, gibt es die Symbolik: \\
+                            $x \in M \quad x \notin M $ \} ist stets eindeutig (deterministisch)
+                        \item \underline{Achtung:} Die Elemente einer Menge müssen nicht geordnet sein, z.B. Die Menge aller Ebenenfiguren (Kreise, Quadrate, Rechtecke)
+                        \item \begin{tabular}{l l}
+                            a) aufzählende Form & $M_1 = \{1, \ 2, \ 3\} $  \\
+                                                & $M_2 = \{\blacklozenge, \ \blacksquare, \ \blacktriangle \} $  \\
+                                                & $M_3 = \{\text{Max}, \ \text{Moritz}\} $ \\
+                                                & $M_4 = \{true, \ false\} $ \\
+                            b) fest eingeführte Buchstaben &  $ x \ \in \ \mathbb{N}$\\ 
+                            c) beschreibende Form & $A = \{a \underbrace{|}_{mit} a \text{~besitzt die Eigenschaft~} E\}$\\
+                                                  & $B = \{b | \text{~ist ein weiblicher Vorname~} \} $ \\ 
+                        \end{tabular}
+                    \end{itemize}
 \end{document}
