@@ -2,6 +2,7 @@
 \graphicspath{./bilder/}
 
 %Für diese Version des Dokuments spezielle Anpassungen
+\definecolor{green}{RGB}{0, 153, 0}
 \newcommand{\lat}[2]{(\textit{Lateinisch \glqq{}#1\grqq{} = #2})}
 \newcommand{\merk}[1]{\glqq{}\textit{#1}\grqq{}}
 
@@ -149,9 +150,38 @@
                     \item[] Potenzmenge $P(M)$ $\Rightarrow$ Menge aller Teilmengen von $M$
                     \item[] \underline{Beispiel:}\hphantom{sss} $M = \{1, \ 2, \ 3\}$
                     \item[] \hphantom{Beispiel}\hphantom{sss} $M = \Big\{\{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}\Big\} + \varnothing $
-                    \item[] \underline{Satz:} Wenn $n \ = \ |m|$, dann $|P(m)| \ = \ 2^n$
+                    \item[] \underline{Satz:}\hphantom{sss} Wenn $n \ = \ |m|$, dann $|P(m)| \ = \ 2^n$
                 \end{itemize}
+                \newpage
             \subsubsection{Mengenoperationen}
                 \begin{itemize}[leftmargin=*]
-                    \item 
+                    \item[1.] \underline{Schnittmengenbildung = Durchschnitt}
+                    \item[] $A \ \textcolor{red}{\cap} \ B \ = \ C \implies C = \{c|c \in A \ \text{\underline{und}} \ c \in B\}$ \\
+                            $A~geschniten~B$
+                    \item[] \underline{Venn-Diagramm}
+                    \item[] \begin{minipage}{0.6\columnwidth}\begin{tikzpicture}
+                        \draw[color=blue, thick, rotate=-15] (0,0) ellipse (2.5 and 1.5);
+                        \draw[color=green, thick, rotate=5] (2.5,-0.5) ellipse (2.0 and 1.5);
+                        \draw[color=red, thick] (-1.5, -2) ellipse (1.0 and 0.5);
+                        \node (1) at (-0.5, 0.9) {1};
+                        \draw[color=magenta, thick] (1) circle (0.3) node[anchor=west] {\textcolor{magenta}{~~C}};
+                        \node (2) at (1.4, 0.3) {2};
+                        \node (3) at (1.3, -0.6) {3};
+                        \node (4) at (3.4, 0) {4};
+                        \node (5) at (-1.0, -2) {5};
+                        \node (6) at (-2.0, -2) {6};
+                        \node (A) at (0, 1.8) {\textcolor{blue}{A}};
+                        \node (B) at (4.8, 0) {\textcolor{green}{B}};
+                        \node (C) at (-2, -2.7) {\textcolor{red}{C}};
+                        \end{tikzpicture}\end{minipage}
+                        \begin{minipage}{0.4\columnwidth}
+                            $A \cap B = \{2, 3\}$ \\
+                            $A \cap C = \{1\}$ \\
+                            $A \cap D = \varnothing$ \\
+                            $B \cap C = \varnothing$ \\
+                            $B \cap D = \varnothing$ \\
+                            $C \cap D = \varnothing$ \\
+                        \end{minipage}
+                \end{itemize} 
+                      
 \end{document}
