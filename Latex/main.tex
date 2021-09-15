@@ -172,7 +172,7 @@
                         \node (6) at (-2.0, -2) {6};
                         \node (A) at (0, 1.8) {\textcolor{blue}{A}};
                         \node (B) at (4.8, 0) {\textcolor{green}{B}};
-                        \node (C) at (-2, -2.7) {\textcolor{red}{C}};
+                        \node (C) at (-2, -2.7) {\textcolor{red}{D}};
                         \end{tikzpicture}\end{minipage}
                         \begin{minipage}{0.4\columnwidth}
                             $A \cap B = \{2, 3\}$ \\
@@ -182,6 +182,35 @@
                             $B \cap D = \varnothing$ \\
                             $C \cap D = \varnothing$ \\
                         \end{minipage}
+                    \item[] \underline{Axiome}
+                        \begin{align*}
+                            A \cap B &= B \cap A & \text{Kommutativität} \\
+                            A \cap B \cap C &= (A \cap B) \cap C & \text{Assoziativität}\\
+                                            &= A \cap (B \cap C) & \text{Assoziativität}\\
+                            A \cap A &= A &    \text{Idempotenz} \\
+                        A \cap \varnothing &= \varnothing & \text{Extremalgesetz} \\
+                        A \cap E &= A & \text{Neutralitätsgesetz} \\        
+                        \end{align*}
+                    \item[] \underline{Verallgemeinerte Symbolik}
+                        \begin{align*}
+                        \textcolor{red}{\bigcap_{\textcolor{green}{i=1}}^{\textcolor{green}{n}}} M_{\textcolor{green}{i}} &= M_1 \cap M_2 \cap M_3 \cap \ldots \cap M_n \\
+                        \textcolor{red}{\bigcap_{\textcolor{green}{i=1}}^{\textcolor{green}{\infty}}} M_{\textcolor{green}{i}} &= \lim_{n \to \infty} \textcolor{red}{\bigcap_{\textcolor{green}{i=1}}^{\textcolor{green}{n}}} M_{\textcolor{green}{i}} = M_1 \cap M_2 \cap M_3 \cap \ldots \cap M_n \\        
+                        \end{align*}
+                    \item[2.] \underline{Vereinigungsmenge}
+                    \item[] $A \ \textcolor{red}{\cup} \ B = C \Longleftrightarrow C = \{c|c \in A ~\text{\underline{oder}}~ c \in B\}$
+                    \item[] \underline{Axiome} \begin{align*}
+                        A \cup B &= B \cup A & \text{Kommutativität} \\
+                        A \cup B \cup C &= (A \cup B) \cup C & \text{Assoziativität} \\
+                                        &= A \cup (B \cup C) & \text{Assoziativität} \\
+                        A \cup A &= A & \text{Itempotenz} \\
+                        A \cup \varnothing &= A & \text{Extremalgesetz} \\
+                        A \cup E &= E & \text{Neutralitätsgesetz} \\
+                        \end{align*}
+                    \item[3.] \underline{Differenzmenge}
+                    \item[] $A \ \textcolor{red}{\setminus} \ B = C \Longleftrightarrow C = \{c|c \in A ~\text{und}~ c \notin B \}$
+                    \item[] $A \ \setminus \ B = A \cap B^E$
+                    \item[]   
                 \end{itemize} 
+            
                       
 \end{document}
