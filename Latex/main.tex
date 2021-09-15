@@ -5,6 +5,10 @@
 \definecolor{green}{RGB}{0, 153, 0}
 \newcommand{\lat}[2]{(\textit{Lateinisch \glqq{}#1\grqq{} = #2})}
 \newcommand{\merk}[1]{\glqq{}\textit{#1}\grqq{}}
+\newcommand{\rot}[1]{\textcolor{red}{#1}}
+\newcommand{\gruen}[1]{\textcolor{green}{#1}}
+\newcommand{\schwarz}[1]{\textcolor{black}{#1}}
+
 
 
 \lohead{\includesvg[height=8mm]{bilder/ba_glauchau_logo}}
@@ -209,7 +213,18 @@
                     \item[3.] \underline{Differenzmenge}
                     \item[] $A \ \textcolor{red}{\setminus} \ B = C \Longleftrightarrow C = \{c|c \in A ~\text{und}~ c \notin B \}$
                     \item[] $A \ \setminus \ B = A \cap B^E$
-                    \item[]   
+                    \item[] Differenzmenge vervollständigen!   
+                    \item[4.] \underline{Komplementbildung}
+                    \item[] $\textcolor{red}{\overline{\textcolor{black}{A}}^E} \ = \ C \Longleftrightarrow C = \{c|c \notin A \}$
+                    \item[] umgeformt: $\overline{A}^E \ = \ E \ \setminus \ A$
+                    \item[] \underline{Axiome:} \begin{eqnarray*}
+                            \overline{\overline{A}^E}^E \ &=& \ A \\
+                            \overline{E}^E \ &=& \ \varnothing \\
+                            \overline{\varnothing}^E \ &=& \ E \\
+                        \end{eqnarray*}
+                    \item[5.] \underline{Symmetrische Differenz}
+                    \item[] $A \ \rot{\triangle} \ B \ = \ C \Longleftrightarrow C = \{c|c \in (A \setminus B) ~\text{\underline{oder}}~ c \in (B     \setminus A)\}$
+                    \item[] Venn-Diagramm einfügen
                 \end{itemize} 
             
                       
