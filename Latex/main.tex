@@ -8,6 +8,8 @@
 \newcommand{\rot}[1]{\textcolor{red}{#1}}
 \newcommand{\gruen}[1]{\textcolor{green}{#1}}
 \newcommand{\schwarz}[1]{\textcolor{black}{#1}}
+\newcommand{\menge}[1]{\{ #1 \}}
+\newcommand{\komplement}[1]{\overline{#1}^E}
 \tikzstyle{every picture}+=[remember picture]
 \everymath{\displaystyle}
 
@@ -161,10 +163,10 @@
                 \newpage
             \subsubsection{Mengenoperationen}
                 \begin{itemize}[leftmargin=*]
-                    \item[1.] \underline{Schnittmengenbildung = Durchschnitt}
+                    \item[1.] \textbf{Schnittmengenbildung = Durchschnitt}
                     \item[] $A \ \textcolor{red}{\cap} \ B \ = \ C \implies C = \{c|c \in A \ \text{\underline{und}} \ c \in B\}$ \\
                             $A~geschniten~B$
-                    \item[] \underline{Venn-Diagramm}
+                    \item[] \textit{Venn-Diagramm}
                     \item[] \begin{minipage}{0.6\columnwidth}\begin{tikzpicture}
                         \draw[color=blue, thick, rotate=-15] (0,0) ellipse (2.5 and 1.5);
                         \draw[color=green, thick, rotate=5] (2.5,-0.5) ellipse (2.0 and 1.5);
@@ -188,7 +190,7 @@
                             $B \cap D = \varnothing$ \\
                             $C \cap D = \varnothing$ \\
                         \end{minipage}
-                    \item[] \underline{Axiome}
+                    \item[] \textit{Axiome}
                         \begin{align*}
                             A \cap B &= B \cap A & \text{Kommutativität} \\
                             A \cap B \cap C &= (A \cap B) \cap C & \text{Assoziativität}\\
@@ -197,14 +199,14 @@
                         A \cap \varnothing &= \varnothing & \text{Extremalgesetz} \\
                         A \cap E &= A & \text{Neutralitätsgesetz} \\        
                         \end{align*}
-                    \item[] \underline{Verallgemeinerte Symbolik}
+                    \item[] \textit{Verallgemeinerte Symbolik}
                         \begin{align*}
                         \textcolor{red}{\bigcap_{\textcolor{green}{i=1}}^{\textcolor{green}{n}}} M_{\textcolor{green}{i}} &= M_1 \cap M_2 \cap M_3 \cap \ldots \cap M_n \\
                         \textcolor{red}{\bigcap_{\textcolor{green}{i=1}}^{\textcolor{green}{\infty}}} M_{\textcolor{green}{i}} &= \lim_{n \to \infty} \textcolor{red}{\bigcap_{\textcolor{green}{i=1}}^{\textcolor{green}{n}}} M_{\textcolor{green}{i}} = M_1 \cap M_2 \cap M_3 \cap \ldots \cap M_n \\        
                         \end{align*}
-                    \item[2.] \underline{Vereinigungsmenge}
+                    \item[2.] \textbf{Vereinigungsmenge}
                     \item[] $A \ \textcolor{red}{\cup} \ B = C \Longleftrightarrow C = \{c|c \in A ~\text{\underline{oder}}~ c \in B\}$
-                    \item[] \underline{Axiome} \begin{align*}
+                    \item[] \textit{Axiome} \begin{align*}
                         A \cup B &= B \cup A & \text{Kommutativität} \\
                         A \cup B \cup C &= (A \cup B) \cup C & \text{Assoziativität} \\
                                         &= A \cup (B \cup C) & \text{Assoziativität} \\
@@ -212,28 +214,28 @@
                         A \cup \varnothing &= A & \text{Extremalgesetz} \\
                         A \cup E &= E & \text{Neutralitätsgesetz} \\
                         \end{align*}
-                    \item[3.] \underline{Differenzmenge}
+                    \item[3.] \textbf{Differenzmenge}
                     \item[] $A \ \textcolor{red}{\setminus} \ B = C \Longleftrightarrow C = \{c|c \in A ~\text{und}~ c \notin B \}$
                     \item[] $A \ \setminus \ B = A \cap B^E$
                     \item[] Differenzmenge vervollständigen!   
-                    \item[4.] \underline{Komplementbildung}
+                    \item[4.] \textbf{Komplementbildung}
                     \item[] $\textcolor{red}{\overline{\textcolor{black}{A}}^E} \ = \ C \Longleftrightarrow C = \{c|c \notin A \}$
                     \item[] umgeformt: $\overline{A}^E \ = \ E \ \setminus \ A$
-                    \item[] \underline{Axiome:} \begin{eqnarray*}
+                    \item[] \textit{Axiome:} \begin{eqnarray*}
                             \overline{\overline{A}^E}^E \ &=& \ A \\
                             \overline{E}^E \ &=& \ \varnothing \\
                             \overline{\varnothing}^E \ &=& \ E \\
                         \end{eqnarray*}
-                    \item[5.] \underline{Symmetrische Differenz}
+                    \item[5.] \textbf{Symmetrische Differenz}
                     \item[] $A \ \rot{\triangle} \ B \ = \ C \Longleftrightarrow C = \{c|c \in (A \setminus B) ~\text{\underline{oder}}~ c \in (B     \setminus A)\}$
                     \item[] Venn-Diagramm einfügen
-                    \item[6.]\underline{Komplement der symmetrischen Differenz}
+                    \item[6.]\textbf{Komplement der symmetrischen Differenz}
                     \item[] $A \ \rot{\overline{\triangle}} \ B$
                     \item[] Venn-Diagramm einfügen 
                 \end{itemize}
             \subsubsection{Weitere Rechenregeln (Axiome)} 
                 \begin{itemize}
-                    \item \underline{Distributivgesetz} \\
+                    \item \textbf{Distributivgesetz} \\
                     \begin{minipage}{0.5\columnwidth}
                         ~ \\
                         Der Vereinigung über  dem Durchschnitt
@@ -260,6 +262,7 @@
                             \path[->] (t1) edge [color=red, out=-75, in=235] (t3);
                         \end{tikzpicture}
                     \end{minipage}
+                    \item[] \textit{Beispiele:}
                     \item[] 
                     \begin{minipage}{0.5\columnwidth}
                     \begin{tikzpicture}
@@ -279,8 +282,34 @@
                         \end{tikzpicture}
                     \end{minipage}
                     \begin{minipage}{0.5\columnwidth}
-                        $A \cup (B \cap C)$ 
+                        $A \cup (B \cap C)$ \\
+                        $B \cap C = \{ 5, 6\}$ \\
+                        $\implies \{1, 2, 4, 5\} \cup \{5, 6\} = \{1, 2, 4, 5, 6\}$ \\
+                        ~ \\
+                        $(A \cup B) \cap (A \cup C) $\\
+                        $ A \cup B = \menge{1, 2, 3, 4, 5, 6}$ \\
+                        $ A \cup C = \menge{1, 2, 4, 5, 6, 7}$ \\
+                        $\implies (A \cup B) \cap (A \cup C) = \menge{1, 2, 4, 5, 6}$ \\
+                        ~ \\
+                        $A \cap (B \cup C)$ \\
+                        $B \cup C = \menge{2, 3, 4, 5, 6, 7}$ \\
+                        $A = \menge{1, 2, 4, 5}$ \\
+                        $\implies A \cap (B \cup C) = \menge{2, 4, 5}$ \\
+                        ~ \\
+                        $(A \cap B) \cup (A \cap C)$ \\
+                        $A \cap B = \menge{2, 5}$ \\
+                        $A \cap C = \menge{4, 5}$ \\
+                        $\implies (A \cap B) \cup (A \cap C) = \menge{2, 4, 5}$
                     \end{minipage}
+                \item \textbf{Komplementärgesetze} 
+                \item[] $A \cap \komplement{A} = \varnothing$ 
+                \item[] $A \cup \komplement{A} = \mathbb{E}$ 
+                \item \textbf{Absorptionsgesetze}
+                \item[] $A \cup (A \cap B) = A $
+                \item[] $A \cup (\komplement{A} \cap B) = A \cup B $
+                \item[] $A \cap (A \cup B) = A $
+                \item[] $A \cap (\komplement{A} \cup B) = A \cap B $
+                \item \textbf{Gesetze von De Morgan} 
                 \end{itemize}
                       
 \end{document}
