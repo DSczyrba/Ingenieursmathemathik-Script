@@ -310,6 +310,34 @@
                 \item[] $A \cap (A \cup B) = A $
                 \item[] $A \cap (\komplement{A} \cup B) = A \cap B $
                 \item \textbf{Gesetze von De Morgan} 
+                \item[] $\komplement{A \cup B} = \komplement{A} \cap \komplement{B}$
+                \item[] $\komplement{A \cap B} = \komplement{A} \cup \komplement{B}$
+                \item[] $ \left.
+                    \begin{array}{c}  \komplement{\bigcup_{i=1}^n M_i} = \bigcap_{i=1}^n \komplement{M_i} \\
+                                \komplement{\bigcap_{i=1}^n M_i} = \bigcup_{i=1}^n \komplement{M_i} \\
+                    \end{array}%
+                     \right\} \text{Dualitätsprinzip} $ %
+                \item[] $A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C)$
+                \item[] $A \setminus (C \cap C) = (A \setminus B) \cup (A \setminus C)$
+                \end{itemize}
+            \subsubsection{Ausgewählte Beispiele}
+                \begin{itemize}
+                    \item[1.] $geg.\quad 4~$ Mengen $A \quad B \quad C \quad D$
+                    \item[]   $ges.\quad A \cup (B \setminus A)$
+                        \begin{align*}
+                            A \cup (B \setminus A) & =A \cup (B \cap \komplement{A}) & \rightarrow X \setminus Y = X \cap \komplement{Y} \\
+                                                   & =(A \cup B) \cap (A \cup \komplement{A})& \rightarrow \text{~Distributivgesetz}\\
+                                                   & =(A \cup B) \cap E & \downarrow X \cap E = X \\
+                            A \cup (B \setminus A) & =\underline{A \cup B} &\\
+                        \end{align*}
+                    \item[2.] $geg.\quad 4~$ Mengen $A \quad B \quad C \quad D$  
+                    \item[]   $ges.\quad (A \setminus B) \cap (B \setminus A)$ \begin{align*}
+                                (A \setminus B) \cap (B \setminus A) & = (A \cap \komplement{B}) \cap (B \cap \komplement{A}) & \downarrow \text{~Assoziativgesetz} \\
+                                & = A \cap \komplement{B} \cap B \cap \komplement{A} & \downarrow \text{~Umsortieren} \\
+                                & = A \cap \komplement{A} \cap B \cap \komplement{B} & \\
+                                & = \varnothing \cap \varnothing & \\
+                                (A \setminus B) \cap (B \setminus A) & = \underline{\varnothing} & \\
+                                \end{align*}
                 \end{itemize}
                       
 \end{document}
