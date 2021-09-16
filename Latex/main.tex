@@ -330,14 +330,70 @@
                                                    & =(A \cup B) \cap E & \downarrow X \cap E = X \\
                             A \cup (B \setminus A) & =\underline{A \cup B} &\\
                         \end{align*}
-                    \item[2.] $geg.\quad 4~$ Mengen $A \quad B \quad C \quad D$  
-                    \item[]   $ges.\quad (A \setminus B) \cap (B \setminus A)$ \begin{align*}
+                    \item[2.]  $ges.\quad (A \setminus B) \cap (B \setminus A)$
+                        \begin{align*}
                                 (A \setminus B) \cap (B \setminus A) & = (A \cap \komplement{B}) \cap (B \cap \komplement{A}) & \downarrow \text{~Assoziativgesetz} \\
                                 & = A \cap \komplement{B} \cap B \cap \komplement{A} & \downarrow \text{~Umsortieren} \\
                                 & = A \cap \komplement{A} \cap B \cap \komplement{B} & \\
                                 & = \varnothing \cap \varnothing & \\
                                 (A \setminus B) \cap (B \setminus A) & = \underline{\varnothing} & \\
-                                \end{align*}
+                        \end{align*}
+                    \item[3.] $ges.\quad (A \cup B) \setminus B$ %
+                        \begin{align*}
+                            (A \cup B) \setminus B & = (A \cup B) \cap \komplement{B} \\
+                                                   & = (A \cap \komplement{B}) \cup (B \cap \komplement{B}) \\
+                                                   & = (A \cap \komplement{B}) \cup \varnothing \\
+                            (A \cup B) \setminus B & = \underline{A \cap \komplement{B}} \\                      
+                        \end{align*}
+                    \item[4.] $ges.\quad (A \setminus B) \cup (A \setminus \komplement{B})$ %
+                        \begin{align*}
+                            (A \setminus B) \cup (A \setminus \komplement{B}) & = (A \cap \komplement{B}) \cup (A \cap B) \\
+                            & = (A \cup A) \cap (A \cup B) \cap (\komplement{B} \cup A) \cap (\komplement{B} \cup B) \\
+                            & = \underbrace{A \cap (A \cup B)}_{Absorptionsgesetz} \cap (\komplement{B} \cup A) \underbrace{\cap \ E}_{entfaellt} \\
+                            & = \underbrace{A \cap (\komplement{B} \cup A)}_{Absorptionsgesetz} \\
+                            (A \setminus B) \cup (A \setminus \komplement{B}) & = \underline{A} \\
+                        \end{align*}
+                    \item[5.] $ges.\quad (A \cap B) \cup (A \cap \komplement{B})$  
+                        \begin{align*}
+                            (A \cap B) \cup (A \cap \komplement{B}) & = (A \cup A) \cap (A \cup \komplement{B}) \cap (B \cup A) \cap (B \cup \komplement{B}) \\
+                                                                    & = A \cap (A \cup \komplement{B}) \cap (B \cup A) \cap E \\
+                                                                    & = A \cap (A \cup B) \\
+                            (A \cap B) \cup (A \cap \komplement{B}) & = \underline{A}                                       
+                        \end{align*}
+                    \item[6.] $ges.\quad (A \cap B) \cup (A \cap \komplement{B})$  
+                        \begin{align*}
+                            (A \cap B) \cup (A \cap \komplement{B}) & = A \cap (B \cup \komplement{B}) \\
+                        \end{align*}
+                    \item[7.] $ges.\quad (A \cap \komplement{D}) \cup (A \cap B \cap D) \cup (A \cap D)$  
+                        \begin{align*}
+                            (A \cap \komplement{D}) \cup (A \cap B \cap D) \cup (A \cap D) & = \Big[ A \cap (\komplement{D} \cup D)\Big] \cup (A \cap B \cap D)\\
+                            & = [A \cap E] \cup (A \cap B \cap D) \\
+                            & = A \cup (A \cap B \cap D) \\
+                            & = (A \cup A) \cap (A \cup B) \cap (A \cup D) \\
+                            & = A \cap (A \cup B) \cap (A \cup D) \\
+                            & = A \cap (A \cup D) \\
+                            (A \cap \komplement{D}) \cup (A \cap B \cap D) \cup (A \cap D) & = \underline{A} \\
+                        \end{align*}
+                    \item[8.] $ges.\quad (A \cap B) \cup (A \cap \komplement{B}) \cup (\komplement{A} \cap \komplement{B})$  
+                        \begin{align*}
+                            (A \cap B) \cup (A \cap \komplement{B}) \cup (\komplement{A} \cap \komplement{B}) & = A \cap (B \cup \komplement{B}) \cup (\komplement{A} \cap \komplement{B}) \\
+                            & = A \cup (\komplement{A} \cap \komplement{B}) \\
+                            & = (A \cup \komplement{A}) \cap (A \cup \komplement{B}) \\
+                            & = E \cap (A \cup \komplement{B}) \\
+                            (A \cap B) \cup (A \cap \komplement{B}) \cup (\komplement{A} \cap \komplement{B}) & = \underline{A \cup \komplement{B}} \\
+                        \end{align*}
+                    \item[9.] $ges.\quad \komplement{A \triangle B}$  
+                        \begin{align*}
+                            \komplement{A \triangle B} & = \komplement{(A \setminus B) \cup (B \setminus A)} & \downarrow \text{~de Morgan}\\
+                            & = \komplement{(A \setminus B)} \cap \komplement{(B \setminus A)} \\
+                            & = \komplement{(A \cap \komplement{B})} \cap \komplement{(B \cap \komplement{A})} & \downarrow \text{~de Morgan} \\
+                            & = (\komplement{A} \cup B) \cap (\komplement{B} \cup A) \\
+                            & = \komplement{A} \cap \komplement{B} \cup \varnothing \cup \varnothing \cup (B \cap A) \\
+                            & = (\komplement{A} \cup B) \cap (\komplement{B} \cup A) \\
+                        \end{align*}
+                    \item[10.] Bei Gelegenheit weitere Beispiele übernehmen
                 \end{itemize}
+            \subsubsection{Abbildungen}
+            
                       
 \end{document}
