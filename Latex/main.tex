@@ -2,6 +2,8 @@
 \graphicspath{./bilder/}
 
 %Für diese Version des Dokuments spezielle Anpassungen
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \definecolor{green}{RGB}{0, 153, 0}
 \newcommand{\lat}[2]{(\textit{Lateinisch \glqq{}#1\grqq{} = #2})}
 \newcommand{\merk}[1]{\glqq{}\textit{#1}\grqq{}}
@@ -234,7 +236,7 @@
                     \item[] Venn-Diagramm einfügen 
                 \end{itemize}
             \subsubsection{Weitere Rechenregeln (Axiome)} 
-                \begin{itemize}
+                \begin{itemize}[leftmargin=*]
                     \item \textbf{Distributivgesetz} \\
                     \begin{minipage}{0.5\columnwidth}
                         ~ \\
@@ -321,7 +323,7 @@
                 \item[] $A \setminus (C \cap C) = (A \setminus B) \cup (A \setminus C)$
                 \end{itemize}
             \subsubsection{Ausgewählte Beispiele}
-                \begin{itemize}
+                \begin{itemize}[leftmargin=*]
                     \item[1.] $geg.\quad 4~$ Mengen $A \quad B \quad C \quad D$
                     \item[]   $ges.\quad A \cup (B \setminus A)$
                         \begin{align*}
@@ -394,8 +396,107 @@
                     \item[10.] Bei Gelegenheit weitere Beispiele übernehmen
                 \end{itemize}
             \subsubsection{Abbildungen}
-                \begin{itemize}
+                \begin{itemize}[leftmargin=*]
                     \item \textbf{Definition:} Es seien $A, B$~Mengen, dann ist eine \gruen{Abbildung} die \rot{Menge der geordneten Paare $(a, b)$}~mit $\rot{a} \in A$~und $\rot{b} \in B$, die über eine \gruen{Abbildungsvorschrift} miteinander verknüpft sind.
-                \end{itemize}
-                      
+                    \item[]\textit{Beispiel} \\
+                        \begin{tikzpicture}
+                            \node (M1) at (-2, 2.3) {\Large$\textcolor{blue}{A}$};
+                            \node (M2) at (4, 2.3) {\Large$\textcolor{blue}{B}$};
+                            \draw[color=blue, thick](-2, 0) circle (2.0);
+                            \node (A) at (-2.8, 0.8) {\Huge$\textcolor{blue}{\triangle}$};
+                            \node (B) at (-1.2, 0.8) {\Huge$\textcolor{blue}{\bigcirc}$};
+                            \node (C) at (-2.8, -0.8) {\Huge$\textcolor{blue}{\square}$};
+                            \node (D) at (-1.2, -0.8) {\Huge$\textcolor{blue}{\boxplus}$};
+                            \draw[color=blue, thick](4, 0) circle (2.0);
+                            \node (E) at (3.2, 1.0) {\Large$\textcolor{blue}{Max}$};
+                            \node (F) at (3.6, 0.0) {\Large$\textcolor{blue}{Fritz}$};
+                            \node (G) at (4, -1.0) {\Large$\textcolor{blue}{Franz}$};
+                            \path[->] (B) edge [color=green, thick] (E);
+                            \path[->] (B) edge [color=green, thick] (F);
+                            \path[->] (D) edge [color=green, thick] (F);
+                        \end{tikzpicture}
+                    \item[] \gruen{Abbildung} $= \Big\{ \rot{(} \bigcirc ; Max\rot{)}; \rot{(} \bigcirc ; Fritz\rot{)} ; \rot{(} \boxplus ; Fritz\rot{)} \Big\}$ 
+                    \item[] Die Menge aller \rot{a}, die ein \gruen{Abbild} \rot{a} besitzen, heißen Definitionsbereich der \gruen{Abbildung}.
+                    \item[] \textit{Beispiel}
+                    \item[] Definitionsbereich $= \{\square; \bigcirc\}$
+                    \item[] Die Menge aller \rot{b}, die \gruen{Abbilder} von Elementen aus \rot{a} darstellen, heißt \rot{Wertebereich} der \gruen{Abbildung}, \textit{z.B.} Wertebereich $= \{Max; Fritz\}$.
+                    \item[] \textit{Sprechweisen}
+                        \begin{itemize}
+                            \item[] \glqq \ $~\ldots$ eine Abbildung \gruen{aus A nach B} \grqq 
+                            \item[] \glqq \ $~\ldots$ eine Abbildung \gruen{aus A in B} \grqq 
+                            \item[] \glqq \ $~\ldots$ eine Abbildung \gruen{von A auf B} \grqq  
+                        \end{itemize}
+                    \item[] \textit{Darstellung von Abbildungsvorschriften}
+                        \begin{enumerate}
+                            \item als Venn-Diagramm
+                            \item als Tabelle
+                            \item[] \textit{Beispiel} \\
+                                \begin{tabular}{P{3cm}|P{3cm}}
+                                    $A$             & $B$           \\\hline
+                                    $\triangle$     & $\setminus$   \\
+                                    $\bigcirc$      & $Max$         \\
+                                    $\bigcirc$      & $Fritz$       \\
+                                    $\square$       & $\setminus$   \\
+                                    $\boxplus$      & $Fritz$       \\
+                                    $\setminus$     & $Franz$       \\
+                                \end{tabular}
+                            \item als mathematisch-analytische Gleichung 
+                            \item[] \textit{Beispiel} \\
+                                \begin{minipage}{0.5\columnwidth}
+                                    \begin{tabular}{P{3cm}|P{3cm}}
+                                        $A$         & $B$       \\\hline
+                                        $-3$        & $5$       \\
+                                        $-2$        & $3$       \\ 
+                                        $-1$        & $1$       \\
+                                        $0$         & $-1$      \\
+                                        $1$         & $1$       \\
+                                        $2$         & $3$       \\
+                                        $3$         & $5$       \\
+                                    \end{tabular}
+                                \end{minipage}
+                                \begin{minipage}{0.5\columnwidth}
+                                    \begin{equation*}
+                                        b = \begin{cases}
+                                            -2 \cdot a -1 & \text{für } a \leq 0 \\
+                                            +2 \cdot a -1 & \text{für } a > 0 \\
+                                        \end{cases}
+                                    \end{equation*}
+                                \end{minipage}
+                            \item[] \textit{\rot{Aufgaben: } Finden Sie Abbildungsvorschriften.} \\
+                                \begin{minipage}[t][8cm][t]{0.5\columnwidth}
+                                    \begin{tabular}{P{3cm}|P{3cm}}
+                                        $A$         & $B$       \\\hline
+                                        $-3$ & $8$ \\
+                                        $-2$ & $4$ \\
+                                        $-1$ & $2$ \\
+                                        $0$ & $1$ \\
+                                        $1$ & $2$ \\
+                                        $2$ & $4$ \\
+                                        $3$ & $8$ \\
+                                    \end{tabular}
+                                    \begin{equation*}
+                                        b = \begin{cases}
+                                            2^{-a} & \text{für } a < 0 \\
+                                            2^a    & \text{für } a \geq 0 \\ 
+                                        \end{cases} = 2^{|a|}
+                                    \end{equation*}
+                                \end{minipage}
+                                \begin{minipage}[t][8cm][t]{0.5\columnwidth}
+                                    \begin{tabular}{P{3cm}|P{3cm}}
+                                        $A$         & $B$       \\\hline
+                                        $-3$ & $10$ \\
+                                        $-2$ & $5$ \\
+                                        $-1$ & $2$ \\
+                                        $0$ & $1$ \\
+                                        $1$ & $2$ \\
+                                        $2$ & $5$ \\
+                                        $3$ & $10$ \\
+                                    \end{tabular}
+                                    \begin{equation*}
+                                        b = a^2 + 1  
+                                    \end{equation*}
+                                \end{minipage}                     
+                        \end{enumerate}
+                    \item[] \textit{Umkehrabbildung}
+                \end{itemize}                    
 \end{document}
