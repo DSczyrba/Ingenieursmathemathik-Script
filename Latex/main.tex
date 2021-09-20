@@ -498,5 +498,59 @@
                                 \end{minipage}                     
                         \end{enumerate}
                     \item[] \textit{Umkehrabbildung}
-                \end{itemize}                    
+                    \item[] $\rightarrow $ entsteht durch das Vertauschen von $D_f$ und $W_f$. \\
+                        \begin{tikzpicture}
+                            \node (M1) at (-2, 2.3) {\Large$\textcolor{blue}{A}$};
+                            \node (M2) at (4, 2.3) {\Large$\textcolor{blue}{B}$};
+                            \draw[color=blue, thick](-2, 0) circle (2.0);
+                            \node (A) at (-2.8, 0.8) {\Huge$\textcolor{blue}{\triangle}$};
+                            \node (B) at (-1.2, 0.8) {\Huge$\textcolor{blue}{\bigcirc}$};
+                            \node (C) at (-2.8, -0.8) {\Huge$\textcolor{blue}{\square}$};
+                            \node (D) at (-1.2, -0.8) {\Huge$\textcolor{blue}{\boxplus}$};
+                            \draw[color=blue, thick](4, 0) circle (2.0);
+                            \node (E) at (3.2, 1.0) {\Large$\textcolor{blue}{Max}$};
+                            \node (F) at (3.6, 0.0) {\Large$\textcolor{blue}{Fritz}$};
+                            \node (G) at (4, -1.0) {\Large$\textcolor{blue}{Franz}$};
+                            \path[<-] (B) edge [color=green, thick] (E);
+                            \path[<-] (B) edge [color=green, thick] (F);
+                            \path[<-] (D) edge [color=green, thick] (F);
+                        \end{tikzpicture}
+                    \item[] \textit{Eindeutige Abbildung}
+                    \item[] $\rightarrow $ Jedem Element des $D_f$ \rot{ist genau} ein Element des $w_f$ zugeordnet. \\
+                        \begin{tikzpicture}
+                            \node (M1) at (-2, 2.3) {\Large$\textcolor{blue}{A}$};
+                            \node (M2) at (4, 2.3) {\Large$\textcolor{blue}{B}$};
+                            \draw[color=blue, thick](-2, 0) circle (2.0);
+                            \node (A) at (-2.8, 0.8) {\Huge$\textcolor{blue}{\triangle}$};
+                            \node (B) at (-1.2, 0.8) {\Huge$\textcolor{blue}{\bigcirc}$};
+                            \node (C) at (-2.8, -0.8) {\Huge$\textcolor{blue}{\square}$};
+                            \node (D) at (-1.2, -0.8) {\Huge$\textcolor{blue}{\boxplus}$};
+                            \draw[color=blue, thick](4, 0) circle (2.0);
+                            \node (E) at (3.2, 1.0) {\Large$\textcolor{blue}{Max}$};
+                            \node (F) at (3.6, 0.0) {\Large$\textcolor{blue}{Fritz}$};
+                            \node (G) at (4, -1.0) {\Large$\textcolor{blue}{Franz}$};
+                            \path[->] (B) edge [color=green, thick] (E);
+                            %\path[<-] (B) edge [color=green, thick] (F);
+                            \path[->] (D) edge [color=green, thick] (E);
+                        \end{tikzpicture}
+                    \item[] \gruen{$\rightarrow $ Anwendung} \\
+                        Anwendung und Funktionsdefinition bei Gelegenheit vervollständigen.
+                \end{itemize} 
+            \subsubsection{Mengenprodukt ( = direktes Produkt von Mengen)}
+                \begin{itemize}[leftmargin=*]
+                    \item[] \begin{tabular}{@{}l p{12cm}}\rot{Definition: }& Es seien $A, B$ Mengen.
+                        Dann ist $A \rot{\times} B $ (das \rot{Kreuzprodukt / Kartesische Produkt}) die Menge \rot{aller} geordneten Paare $(a; b)$ mit $a \in A$ und $b \in B$. \\ \end{tabular}
+                    \item[] \textit{Beispiel:} 
+                    \begin{align*}
+                        A &= \{ 1, 2, 3\} \\
+                        B &= \{ x, y\} \\
+                        A \times B &= \big\{ (1,x), (1,y), (2,x), (2,y), (3,x), (3,y)\big\}
+                    \end{align*}  
+                    \item[] \begin{tabular}{@{}l p{12cm}}\rot{Achtung:}& Das Kreuzprodukt ist nicht kommutativ, d.h. $A \times B \neq B \times A$, da das geordnete Paar $(a,b) \neq (b, a)$ ist. \\ \end{tabular}
+                    \item[] \textit{Verallgemeinerung}
+                    \item[] Es seien $M_1, \ M_2, \ M_3, \ \ldots \ , M_n$ Mengen. 
+                            Dann ist $M_1 \times M_2 \times M_3 \times \ldots \times M_n$ die Menge aller geordneten \rot{n-Tupel} $(m_1;\ m_2;\ m_3;\ \ldots \ ; m_4)$ mit $m_1 \in M_1$, $m_2 \in M_2$ usw. \\~\\
+                            Für die Anzahl der Elemente des Mengenprodukts gilt: \\ 
+                            $| M \times N | = |M| \cdot |N| \text{~bzw.~} |M_1 \times M_2 \times M_3 \times \ldots \times M_n| = |M_1| \cdot |M_2| \cdot |M_3| \cdot \ldots \cdot |M_n|$
+                \end{itemize}              
 \end{document}
